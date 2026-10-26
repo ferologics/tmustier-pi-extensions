@@ -1,8 +1,8 @@
 # extending-pi
 
-Guide for extending Pi — decide between Agent Skills, extensions, prompt templates, themes, context files, custom models/providers, and Pi packages, then create and package them.
+Choose between Pi configuration, skills, prompt templates, MCP integrations, extensions, external automation and packages.
 
-The skill emphasizes Pi's extension-first architecture: when changing Pi behavior, inspect the extension docs, examples, and installed types/source before considering a Pi internal patch.
+The skill points to the target Pi installation's documentation and requires checking public extension capabilities before proposing a core patch.
 
 Includes nested Agent Skills:
 - **skill-creator** — detailed guidance for creating Agent Skills
