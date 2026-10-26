@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.3] - 2026-10-26
+
+### Fixed
+- Draw a recap when a session is reopened from the command line (`pi -c`, `pi -r`, `pi --session <file>`, or a terminal restoring its sessions). Pi reports these as a `startup` session start, and only an in-process `/resume` as `resume`, so the recap only ever fired on `/resume` and `/fork`. A fresh session still draws no recap, and neither does reopening with a prompt, since the agent starts work straight away.
+
+Thanks to @ferologics for the report and diagnosis.
+
 ## [0.5.2] - 2026-10-26
 
 ### Fixed
