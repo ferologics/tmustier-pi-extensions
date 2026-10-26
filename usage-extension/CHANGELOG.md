@@ -1,5 +1,16 @@
 # Changelog
 
+## [0.10.0] - 2026-10-26
+
+### Added
+- **This Month period.** New tab between Last Week and Last 30 Days covering the current calendar month from local midnight on the 1st, in the graph, table, insights, and exports. Useful when a usage budget resets on the 1st of each month.
+
+### Fixed
+- Collapse Windows home directories in project labels. Backslash paths are normalised, `C:\Users\<name>\...` collapses to `~/...` like `/Users/<name>` and `/home/<name>`, and other drive paths drop the drive letter (`D:\work\repo` becomes `work/repo`). Previously the project mix insight showed raw Windows paths.
+- Make the usage tests pass on Windows.
+
+Thanks to @mturley for This Month ([#114](https://github.com/tmustier/pi-extensions/pull/114), requested in [#107](https://github.com/tmustier/pi-extensions/issues/107)) and @dawidmachon for the Windows fix ([#110](https://github.com/tmustier/pi-extensions/pull/110)).
+
 ## [0.9.5] - 2026-09-22
 
 ### Changed

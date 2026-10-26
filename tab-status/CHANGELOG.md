@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.6] - 2026-10-26
+
+### Fixed
+- Ignore a stale extension context after session replacement. Pi can deliver a late `agent_settled` event to the replaced session, for example after a plan-mode handoff starts a fresh session, and updating the tab title from it raised an extension error.
+
+Thanks to @schadin for the fix and regression test ([#113](https://github.com/tmustier/pi-extensions/pull/113)).
+
 ## [0.1.5] - 2026-09-22
 
 ### Changed
