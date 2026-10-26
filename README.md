@@ -21,7 +21,6 @@ Example extensions for the [Pi coding agent](https://github.com/badlogic/pi-mono
 | Agent Skill | Description |
 |-------------|-------------|
 | [extending-pi](extending-pi/) | Guide for extending Pi — decide between Agent Skills, extensions, prompt templates, themes, models/providers, or packages. |
-| ↳ [skill-creator](extending-pi/skill-creator/) | Detailed guidance for creating Agent Skills. |
 | [pi-ralph-wiggum](pi-ralph-wiggum/) | Agent Skill instructions for long-running development loops. |
 
 ## Install (pi package manager)

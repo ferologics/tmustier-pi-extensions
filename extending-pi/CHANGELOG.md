@@ -3,7 +3,8 @@
 ## Unreleased
 - Simplify the skill to mechanism selection, installed documentation and the public-extension check before a core patch.
 - Cover existing settings/packages, MCP, CLI/RPC/SDK integration and the distinction between packages and runtime mechanisms.
-- Remove generic authoring guidance and the dependency on skill-creator; the nested skill remains separately available.
+- Remove generic authoring guidance.
+- Retire the nested skill-creator skill, its validator and tests, and remove its package manifest entries.
 
 ## 0.1.2 - 2026-05-13
 - Refresh guidance for current Pi extension architecture: extensions can be single TypeScript files or packaged resources, with `package.json`/`pi` manifests for sharing.

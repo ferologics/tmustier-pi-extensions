@@ -16,8 +16,7 @@
   "homepage": "https://github.com/tmustier/pi-extensions/tree/main/extending-pi",
   "pi": {
     "skills": [
-      "SKILL.md",
-      "./skill-creator/SKILL.md"
+      "SKILL.md"
     ]
   }
 }

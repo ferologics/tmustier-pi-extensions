@@ -4,9 +4,6 @@ Choose between Pi configuration, skills, prompt templates, MCP integrations, ext
 
 The skill points to the target Pi installation's documentation and requires checking public extension capabilities before proposing a core patch.
 
-Includes nested Agent Skills:
-- **skill-creator** — detailed guidance for creating Agent Skills
-
 ## Installation
 
 ```bash
