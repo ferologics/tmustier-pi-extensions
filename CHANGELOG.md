@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.70] - 2026-10-26
+
+### Changed
+- Simplify extending-pi 0.1.3 to mechanism selection, installed documentation and checking public extension capabilities before proposing a core patch.
+
+### Removed
+- Retire the bundled skill-creator skill, its validator and tests.
+
 ## [0.1.69] - 2026-10-26
 
 ### Changed

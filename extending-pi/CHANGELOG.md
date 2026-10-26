@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.1.3 - 2026-10-26
 - Simplify the skill to mechanism selection, installed documentation and the public-extension check before a core patch.
 - Cover existing settings/packages, MCP, CLI/RPC/SDK integration and the distinction between packages and runtime mechanisms.
 - Remove generic authoring guidance.
