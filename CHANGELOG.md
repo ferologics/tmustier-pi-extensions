@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.68] - 2026-10-26
+
+### Changed
+- Include session recap 0.5.2, tab status 0.1.6, and usage 0.10.0.
+- Usage adds a This Month period and collapses Windows home directories in project labels.
+- Session recap no longer renders a failed, aborted, or token-capped response as a recap, and reports failures through the UI instead of the console.
+- Tab status ignores a stale context after session replacement instead of raising an extension error.
+
 ## [0.1.67] - 2026-09-22
 
 ### Changed
