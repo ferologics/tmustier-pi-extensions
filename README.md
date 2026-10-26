@@ -1,6 +1,6 @@
 # pi-extensions
 
-Personal extensions for the [Pi coding agent](https://github.com/badlogic/pi-mono).
+Example extensions for the [Pi coding agent](https://github.com/badlogic/pi-mono). These are the first Pi extensions I ever created and are meant to inspire you on some things you can do with Pi. I still use some of these, but note that if you want the maintainer's (my) pi setup, it is currently here https://github.com/tmustier/vibes.
 
 ## Extensions
 
