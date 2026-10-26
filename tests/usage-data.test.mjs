@@ -1144,6 +1144,12 @@ test("projectLabelFromCwd collapses cwds to stable project labels", () => {
 	assert.equal(projectLabelFromCwd("/Users/olduser/projects/customers/xpo"), "~/projects/customers");
 	assert.equal(projectLabelFromCwd("/home/olduser/work"), "~/work");
 	assert.equal(projectLabelFromCwd("/Users/olduser"), "~");
+	// Windows home dirs collapse to "~" like POSIX ones, whichever user they belong to.
+	assert.equal(projectLabelFromCwd("C:\\Users\\rider\\projects\\foo\\sub\\dir"), "~/projects/foo");
+	assert.equal(projectLabelFromCwd("C:\\Users\\rider\\projects\\foo\\.worktrees\\bar"), "~/projects/foo");
+	assert.equal(projectLabelFromCwd("C:\\Users\\rider"), "~");
+	// Outside a home, the drive segment is dropped and separators normalize to "/".
+	assert.equal(projectLabelFromCwd("D:\\work\\repo\\sub"), "work/repo");
 });
 
 test("loadUsageCache returns empty for a missing cache file", async (t) => {
