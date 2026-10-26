@@ -570,9 +570,14 @@ export default function (pi: ExtensionAPI) {
 	pi.on("session_start", (event, ctx) => {
 		attachFocusReporting(ctx);
 		if (isDisabled() || !ctx.hasUI) return;
-		if (event.reason === "resume" || event.reason === "fork") {
+		// Pi reports a session opened from the command line (`pi -c`, `pi -r`,
+		// `pi --session <file>`, terminal session restore) as "startup"; only an
+		// in-process switch reports "resume". A fresh session has no activity to
+		// recap, so generateAndShow skips it.
+		if (event.reason === "startup" || event.reason === "resume" || event.reason === "fork") {
 			setTimeout(() => {
-				void generateAndShow(ctx, "resume");
+				// `pi -c "<prompt>"` starts work at once; the recap would be stale on arrival.
+				if (!agentActive) void generateAndShow(ctx, "resume");
 			}, 300);
 		}
 	});

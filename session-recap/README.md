@@ -14,7 +14,7 @@ The recap orients rather than reports: it states the high-level task first (what
 2. **Turn ends while you're away.** If the agent finishes a turn while the terminal is blurred — the prime multi-tab moment — a recap is drafted after a short debounce.
 3. **Idle fallback.** Only on terminals that haven't demonstrated focus-reporting support: `--recap-idle-seconds` (default 120s) after the last `turn_end` with no input, a recap is generated anyway. The first real focus event disarms this path for the session.
 
-Also fires automatically on `/resume` and `/fork` so you know where the prior session left off.
+Also fires automatically when you reopen a session with history, so you know where it left off: `/resume`, `/fork`, `pi -c`, `pi -r`, `pi --session <file>`, or a terminal restoring its sessions. It is skipped when you reopen with a prompt (`pi -c "<prompt>"`), because the agent starts work straight away.
 
 The recap disappears when you submit a message or new agent work begins. It is temporary UI: it is not saved in session history or sent to the model.
 

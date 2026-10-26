@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.69] - 2026-10-26
+
+### Changed
+- Include session recap 0.5.3, which draws a recap when a session is reopened from the command line (`pi -c`, `pi -r`, `pi --session <file>`), not only on `/resume`.
+
 ## [0.1.68] - 2026-10-26
 
 ### Changed
