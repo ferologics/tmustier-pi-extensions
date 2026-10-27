@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.1.71] - 2026-10-27
+
+### Fixed
+- Include session recap 0.5.4, which stops sending Pi's system prompt and tools with each recap. Recaps on an Anthropic subscription failed with a 400 once the account had no extra usage left.
+
 ## [0.1.70] - 2026-10-26
 
 ### Changed

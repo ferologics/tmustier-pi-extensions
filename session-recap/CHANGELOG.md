@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.4] - 2026-10-27
+
+### Fixed
+- Stop sending Pi's system prompt and tools with the recap. Pi 1.x saves them in the session as `system` messages, and the recap copied them along with the conversation, so each recap carried Pi's full prompt (about 28,000 characters) and tool definitions. On an Anthropic subscription, that request is billed as third-party usage, so recaps failed with a 400 once the account had no extra usage left, whichever model drafted them. The recap now sends only the conversation ([#122](https://github.com/tmustier/pi-extensions/issues/122)).
+
 ## [0.5.3] - 2026-10-26
 
 ### Fixed

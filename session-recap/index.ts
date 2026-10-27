@@ -89,11 +89,14 @@ export function buildRecapContext(
 	}
 	const initialTask = findInitialTask(branchEntries);
 
+	// Pi stores its system prompt and tools as `system` messages. Leave them out: the recap
+	// needs only the conversation, and Anthropic bills a subscription request that carries
+	// Pi's prompt as third-party usage.
 	const messages = convertToLlm(
 		entries
 			.filter(({ sourceEntry }) => sourceEntry.type !== "compaction" && sourceEntry.type !== "branch_summary")
 			.flatMap((entry) => entry.messages),
-	).map((message) => {
+	).filter((message) => message.role !== "system").map((message) => {
 		if (message.role !== "toolResult") return message;
 		return {
 			...message,
