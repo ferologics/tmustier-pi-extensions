@@ -124,6 +124,31 @@ test("recap context adds a user boundary before an assistant-led window", () => 
 	assert.equal(context.messages[1].role, "assistant");
 });
 
+test("recap context leaves out the session's system prompt and tools", () => {
+	const tool = { name: "read", description: "Read a file", parameters: { type: "object", properties: {} } };
+	const context = recap([
+		{
+			type: "message",
+			message: {
+				role: "system",
+				content: "You are an expert coding assistant operating inside pi.",
+				sections: { project: "<project_context>Project rules</project_context>" },
+				toolsAdded: [tool],
+				timestamp: 1,
+			},
+		},
+		{ type: "message", message: { role: "user", content: "Fix the login form.", timestamp: 2 } },
+		{
+			type: "message",
+			message: { role: "system", content: "Additional instructions.", toolsRemoved: [{ name: "read" }], timestamp: 3 },
+		},
+		{ type: "message", message: { role: "assistant", content: [{ type: "text", text: "Looking." }], timestamp: 4 } },
+	]);
+
+	assert.deepEqual(context.messages.map((message) => message.role), ["user", "assistant"]);
+	assert.doesNotMatch(JSON.stringify(context), /expert coding assistant|Project rules|Additional instructions|Read a file/);
+});
+
 test("recap context does not repeat a recent initial request", () => {
 	const context = recap([initialEntry]);
 	assert.equal(context.broaderContext, undefined);
