@@ -36,8 +36,8 @@ If focus events cause any weirdness in your terminal, run with `--recap-disable-
 The recap reuses the active provider's authentication and chooses a cheaper model when available:
 
 1. `--recap-model` when set.
-2. `anthropic/claude-haiku-4-5` for Anthropic sessions.
-3. GPT-5.6 Luna when the active model is GPT and its provider offers Luna.
+2. `anthropic/claude-haiku-5-5` for Anthropic sessions.
+3. GPT-6 Luna when the active model is GPT and its provider offers Luna.
 4. The currently active model otherwise.
 
 The recap sends no system prompt, no tools and no Agent Skills, and never writes to the prompt cache. Pi saves its system prompt and tools in the session as `system` messages; the recap leaves those out and sends only the conversation. Reasoning is always off: most APIs disable thinking when no reasoning level is requested, and Codex models are sent an explicit `reasoningEffort: "none"` because they would otherwise fall back to the server-side default.
