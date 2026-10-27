@@ -3,7 +3,10 @@
 ## [0.1.71] - 2026-10-27
 
 ### Fixed
-- Include session recap 0.5.4, which stops sending Pi's system prompt and tools with each recap. Recaps on an Anthropic subscription failed with a 400 once the account had no extra usage left.
+- Include session recap 0.5.4, which stops sending Pi's system prompt and tools with each recap. Recaps on an Anthropic subscription failed with a 400 once the account had no extra usage left. Thanks to @ferologics for the report.
+
+### Changed
+- Session recap 0.5.4 drafts recaps with Claude Haiku 5.5 and GPT-6 Luna.
 
 ## [0.1.70] - 2026-10-26
 

@@ -28,9 +28,9 @@ const RECAP_KEY = "session-recap";
 
 const DEFAULT_AWAY_SECONDS = 90;
 const DEFAULT_IDLE_SECONDS = 120;
-const ANTHROPIC_RECAP_MODEL = "claude-haiku-4-5";
+const ANTHROPIC_RECAP_MODEL = "claude-haiku-5-5";
 const GPT_MODEL_ID = /(?:^|\/)gpt-/;
-const LUNA_RECAP_MODEL = /(?:^|\/)gpt-5[.-]6-luna(?:$|[@:])/;
+const LUNA_RECAP_MODEL = /(?:^|\/)gpt-6-luna(?:$|[@:])/;
 
 // Debounce after a turn ends while blurred, so mid-loop turn_ends (which are
 // immediately followed by the next turn_start) don't trigger drafts.
